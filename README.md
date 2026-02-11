@@ -95,27 +95,6 @@ Todas as classes CSS seguem nomenclatura em inglês para melhor padronização:
 - Função `translate()` global para uso dinâmico
 - Preferência de idioma salva em `localStorage`
 
-## 📦 Estrutura de Arquivos
-
-```
-estoque-nuvem-frontend/
-│
-├── index.html              # Página principal
-├── css/
-│   └── styles.css         # Estilos globais (classes em inglês)
-├── js/
-│   ├── translations.js    # Sistema de tradução PT/EN
-│   ├── api.js             # Funções de comunicação com a API
-│   ├── ui.js              # Funções de interface do usuário
-│   └── app.js             # Lógica principal da aplicação
-├── tests/
-│   ├── setup.js           # Configuração dos testes
-│   ├── api.test.js        # Testes da API
-│   └── ui.test.js         # Testes da UI
-├── package.json           # Configuração do projeto e dependências
-└── README.md             # Documentação
-```
-
 ## 🧪 Testes Unitários
 
 O projeto inclui testes unitários abrangentes:
@@ -162,21 +141,6 @@ O projeto inclui testes unitários abrangentes:
 - Confirmação antes de excluir
 - Confirmação especial ao limpar estoque
 - Previne ações acidentais
-
-## 🎨 Paleta de Cores
-
-```css
---primary-color: #ff6b35     /* Laranja principal */
---primary-dark: #e55a2b      /* Laranja escuro */
---primary-light: #ff8256     /* Laranja claro */
---secondary-color: #f7931e   /* Laranja secundário */
---background: #f5f7fa        /* Fundo */
---text-dark: #2c3e50         /* Texto escuro */
---text-light: #ffffff        /* Texto claro */
---success: #27ae60           /* Verde sucesso */
---danger: #e74c3c            /* Vermelho erro */
---warning: #f39c12           /* Amarelo aviso */
-```
 
 ## 📋 Validações
 
