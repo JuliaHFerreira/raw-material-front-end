@@ -2,6 +2,11 @@
 
 Frontend responsivo desenvolvido em HTML, CSS e JavaScript puro para sistema de gestão de estoque e produção.
 
+## 🔗 Repositórios
+
+- Back-end: https://github.com/JuliaHFerreira/raw-material-control-system
+- Front-end: https://github.com/JuliaHFerreira/raw-material-front-end
+
 ## 🌍 Multilíngue (PT/EN)
 
 O sistema possui **tradução completa** para Português e Inglês:
