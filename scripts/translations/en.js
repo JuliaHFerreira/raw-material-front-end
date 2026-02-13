@@ -3,7 +3,7 @@ window.TRANSLATIONS = window.TRANSLATIONS || {};
 
 window.TRANSLATIONS.en = {
   // App Name
-  'app-name': 'CLOUD STOCK',
+  'app-name': 'Raw Material Stock',
 
   // Menu Items
   'menu-dashboard': 'Dashboard',
@@ -13,7 +13,7 @@ window.TRANSLATIONS.en = {
   'menu-manufacturing': 'Manufacturing',
   'menu-stock': 'Stock',
   'menu-available-production': 'Available Production',
-  'menu-production': 'Production',
+  'stock-movement': 'Stock Movement - Manual',
   'menu-support': 'Support',
   'menu-feedback': 'Feedback',
   'menu-settings': 'Settings',
@@ -53,10 +53,10 @@ window.TRANSLATIONS.en = {
   'stock-management': 'Stock Control',
   'search-stock': 'Search in stock...',
   'no-stock': 'No items in stock',
+  'stock-movement-title': 'Stock Movement',
 
   // Production
   'available-production-title': 'Production Availability',
-  'production-title': 'Production',
   'refresh': 'Refresh',
   'loading': 'Loading...',
 
@@ -74,6 +74,8 @@ window.TRANSLATIONS.en = {
   'table-loss': 'Loss (%)',
   'table-stock-quantity': 'Stock Quantity',
   'table-available-quantity': 'Available Quantity',
+  'table-total-value': 'Total Value',
+  'table-priority': 'Priority',
   'table-status': 'Status',
   'table-structure': 'Structure',
 
@@ -92,6 +94,7 @@ window.TRANSLATIONS.en = {
   'form-loss': 'Loss (%)*',
   'form-barcode': 'Barcode (EAN 13)',
   'form-movement-type': 'Movement Type',
+  'form-product-code-clear': 'Product Code*',
 
   // Form Options
   'select': 'Select...',
@@ -105,6 +108,10 @@ window.TRANSLATIONS.en = {
   'delete': 'Delete',
   'clear': 'Clear',
   'execute-movement': 'Execute Movement',
+  'clear-all-structure': 'Clear Structure',
+  'enter-product-code': 'Enter product code:',
+  'clear-all-structure': 'Clear Structure',
+  'confirm-clear': 'Confirm',
 
   // Status
   'available': 'Available',
@@ -141,5 +148,10 @@ window.TRANSLATIONS.en = {
   'error-updating-stock': 'Error executing movement',
   'error-product-not-found': 'Product not found',
   'error-raw-material-not-found': 'Raw material not found',
-  'error-structure-not-found': 'Structure not found'
+  'error-structure-not-found': 'Structure not found',
+  'confirm-clear-all-structure': 'WARNING: Are you sure you want to delete ALL STRUCTURE for product {code}? This action cannot be undone!',
+  'success-all-structure-deleted': 'All product structure deleted successfully!',
+  'warning': 'WARNING',
+  'clear-structure-warning': 'This action will delete ALL structures related to this product. This action cannot be undone!',
+  'success-all-structure-deleted': 'All product structure deleted successfully!'
 };

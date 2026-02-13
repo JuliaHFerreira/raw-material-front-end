@@ -1,5 +1,6 @@
+```html
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body data-lang="pt">
+<body data-lang="en">
     <!-- Language Selector -->
     <div class="language-selector">
-        <button class="language-button active" data-lang="pt" title="Português">
+        <button class="language-button" data-lang="pt" title="Portuguese">
             🇧🇷 PT
         </button>
-        <button class="language-button" data-lang="en" title="English">
+        <button class="language-button active" data-lang="en" title="English">
             🇺🇸 EN
         </button>
     </div>
@@ -31,33 +32,33 @@
             </a>
             <a href="#" class="navigation-item" data-page="products">
                 <i class="fas fa-box"></i>
-                <span data-translate="menu-products">Produtos</span>
+                <span data-translate="menu-products">Products</span>
             </a>
             <a href="#" class="navigation-item" data-page="raw-materials">
                 <i class="fas fa-cubes"></i>
-                <span data-translate="menu-raw-materials">Matéria-Prima</span>
+                <span data-translate="menu-raw-materials">Raw Materials</span>
             </a>
             <a href="#" class="navigation-item" data-page="structure">
                 <i class="fas fa-sitemap"></i>
-                <span data-translate="menu-structure">Estrutura</span>
+                <span data-translate="menu-structure">Structure</span>
             </a>
             <a href="#" class="navigation-item dropdown-toggle">
                 <i class="fas fa-industry"></i>
-                <span data-translate="menu-manufacturing">Manufatura</span>
+                <span data-translate="menu-manufacturing">Manufacturing</span>
                 <i class="fas fa-chevron-down dropdown-icon"></i>
             </a>
             <div class="dropdown-menu">
                 <a href="#" class="navigation-item sub-item" data-page="stock">
                     <i class="fas fa-warehouse"></i>
-                    <span data-translate="menu-stock">Estoque</span>
+                    <span data-translate="menu-stock">Stock</span>
                 </a>
                 <a href="#" class="navigation-item sub-item" data-page="available-production">
                     <i class="fas fa-chart-bar"></i>
-                    <span data-translate="menu-available-production">Disponível Produção</span>
+                    <span data-translate="menu-available-production">Available for Production</span>
                 </a>
                 <a href="#" class="navigation-item sub-item" data-page="production">
                     <i class="fas fa-cogs"></i>
-                    <span data-translate="menu-production">Produção</span>
+                    <span data-translate="stock-movement">Stock Movement - Manual</span>
                 </a>
             </div>
         </nav>
@@ -85,7 +86,7 @@
                         <i class="fas fa-box"></i>
                     </div>
                     <div class="card-content">
-                        <p class="card-label" data-translate="dashboard-total-products">Quantidade de Produtos Cadastrados</p>
+                        <p class="card-label" data-translate="dashboard-total-products">Registered Products</p>
                         <h3 class="card-value" id="totalProducts">0</h3>
                     </div>
                 </div>
@@ -95,7 +96,7 @@
                         <i class="fas fa-cubes"></i>
                     </div>
                     <div class="card-content">
-                        <p class="card-label" data-translate="dashboard-total-raw-materials">Quantidade de Matérias-Primas Cadastradas</p>
+                        <p class="card-label" data-translate="dashboard-total-raw-materials">Registered Raw Materials</p>
                         <h3 class="card-value" id="totalRawMaterials">0</h3>
                     </div>
                 </div>
@@ -105,26 +106,26 @@
                         <i class="fas fa-dollar-sign"></i>
                     </div>
                     <div class="card-content">
-                        <p class="card-label" data-translate="dashboard-total-cost">Custo Total de Produtos</p>
-                        <h3 class="card-value" id="totalCost">R$ 0</h3>
+                        <p class="card-label" data-translate="dashboard-total-cost">Total Products Cost</p>
+                        <h3 class="card-value" id="totalCost">0</h3>
                     </div>
                 </div>
             </div>
 
             <div class="shortcuts-section">
-                <h2 data-translate="shortcuts">Atalhos</h2>
+                <h2 data-translate="shortcuts">Shortcuts</h2>
                 <div class="shortcuts-grid">
                     <div class="shortcut-card" data-page="products">
                         <i class="fas fa-box"></i>
-                        <button class="button-primary" data-translate="shortcut-products">Cadastro de Produtos</button>
+                        <button class="button-primary" data-translate="shortcut-products">Product Registration</button>
                     </div>
                     <div class="shortcut-card" data-page="raw-materials">
                         <i class="fas fa-cubes"></i>
-                        <button class="button-primary" data-translate="shortcut-raw-materials">Cadastro de Matéria-Prima</button>
+                        <button class="button-primary" data-translate="shortcut-raw-materials">Raw Material Registration</button>
                     </div>
                     <div class="shortcut-card" data-page="structure">
                         <i class="fas fa-sitemap"></i>
-                        <button class="button-primary" data-translate="shortcut-structure">Gerenciar Estrutura de Produtos</button>
+                        <button class="button-primary" data-translate="shortcut-structure">Manage Product Structure</button>
                     </div>
                 </div>
             </div>
@@ -133,31 +134,31 @@
         <!-- Products Page -->
         <div id="products-page" class="page">
             <div class="page-header">
-                <h2 data-translate="products-management">Gerenciamento de Produtos</h2>
+                <h2 data-translate="products-management">Product Management</h2>
                 <button class="button-primary" id="btnNewProduct">
-                    <i class="fas fa-plus"></i> <span data-translate="new-product">Novo Produto</span>
+                    <i class="fas fa-plus"></i> <span data-translate="new-product">New Product</span>
                 </button>
             </div>
 
             <div class="table-container">
                 <div class="search-bar">
-                    <input type="text" id="searchProducts" data-translate-placeholder="search-products" placeholder="Buscar produtos...">
+                    <input type="text" id="searchProducts" data-translate-placeholder="search-products" placeholder="Search products...">
                     <i class="fas fa-search"></i>
                 </div>
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th data-translate="table-code">Código</th>
-                            <th data-translate="table-description">Descrição</th>
-                            <th data-translate="table-type">Tipo</th>
-                            <th data-translate="table-barcode">Código de Barras</th>
-                            <th data-translate="table-price">Preço</th>
-                            <th data-translate="table-actions">Ações</th>
+                            <th data-translate="table-code">Code</th>
+                            <th data-translate="table-description">Description</th>
+                            <th data-translate="table-type">Type</th>
+                            <th data-translate="table-barcode">Barcode</th>
+                            <th data-translate="table-price">Price</th>
+                            <th data-translate="table-actions">Actions</th>
                         </tr>
                     </thead>
                     <tbody id="productsTableBody">
                         <tr>
-                            <td colspan="6" class="no-data" data-translate="no-products">Nenhum produto cadastrado</td>
+                            <td colspan="6" class="no-data" data-translate="no-products">No products registered</td>
                         </tr>
                     </tbody>
                 </table>
@@ -167,31 +168,31 @@
         <!-- Raw Materials Page -->
         <div id="raw-materials-page" class="page">
             <div class="page-header">
-                <h2 data-translate="raw-materials-management">Gerenciamento de Matéria-Prima</h2>
+                <h2 data-translate="raw-materials-management">Raw Material Management</h2>
                 <button class="button-primary" id="btnNewRawMaterial">
-                    <i class="fas fa-plus"></i> <span data-translate="new-raw-material">Nova Matéria-Prima</span>
+                    <i class="fas fa-plus"></i> <span data-translate="new-raw-material">New Raw Material</span>
                 </button>
             </div>
 
             <div class="table-container">
                 <div class="search-bar">
-                    <input type="text" id="searchRawMaterials" data-translate-placeholder="search-raw-materials" placeholder="Buscar matérias-primas...">
+                    <input type="text" id="searchRawMaterials" data-translate-placeholder="search-raw-materials" placeholder="Search raw materials...">
                     <i class="fas fa-search"></i>
                 </div>
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th data-translate="table-code">Código</th>
-                            <th data-translate="table-description">Descrição</th>
-                            <th data-translate="table-type">Tipo</th>
-                            <th data-translate="table-barcode">Código de Barras</th>
-                            <th data-translate="table-cost">Custo</th>
-                            <th data-translate="table-actions">Ações</th>
+                            <th data-translate="table-code">Code</th>
+                            <th data-translate="table-description">Description</th>
+                            <th data-translate="table-type">Type</th>
+                            <th data-translate="table-barcode">Barcode</th>
+                            <th data-translate="table-cost">Cost</th>
+                            <th data-translate="table-actions">Actions</th>
                         </tr>
                     </thead>
                     <tbody id="rawMaterialsTableBody">
                         <tr>
-                            <td colspan="6" class="no-data" data-translate="no-raw-materials">Nenhuma matéria-prima cadastrada</td>
+                            <td colspan="6" class="no-data" data-translate="no-raw-materials">No raw materials registered</td>
                         </tr>
                     </tbody>
                 </table>
@@ -201,31 +202,36 @@
         <!-- Structure Page -->
         <div id="structure-page" class="page">
             <div class="page-header">
-                <h2 data-translate="structure-management">Estrutura de Produtos</h2>
-                <button class="button-primary" id="btnNewStructure">
-                    <i class="fas fa-plus"></i> <span data-translate="new-structure">Nova Estrutura</span>
-                </button>
+                <h2 data-translate="structure-management">Product Structure</h2>
+                <div style="display: flex; gap: 10px;">
+                    <button class="button-primary" id="btnNewStructure">
+                        <i class="fas fa-plus"></i> <span data-translate="new-structure">New Structure</span>
+                    </button>
+                    <button class="button-danger" id="btnClearAllStructure">
+                        <i class="fas fa-trash-alt"></i> <span data-translate="clear-all-structure">Clear Structure</span>
+                    </button>
+                </div>
             </div>
 
             <div class="table-container">
                 <div class="search-bar">
-                    <input type="text" id="searchStructures" data-translate-placeholder="search-structures" placeholder="Buscar estruturas...">
+                    <input type="text" id="searchStructures" data-translate-placeholder="search-structures" placeholder="Search structures...">
                     <i class="fas fa-search"></i>
                 </div>
                 <table class="data-table">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th data-translate="table-product-code">Código Produto</th>
-                            <th data-translate="table-raw-code">Código Matéria-Prima</th>
-                            <th data-translate="table-quantity">Quantidade</th>
-                            <th data-translate="table-loss">Perda (%)</th>
-                            <th data-translate="table-actions">Ações</th>
+                            <th data-translate="table-product-code">Product Code</th>
+                            <th data-translate="table-raw-code">Raw Material Code</th>
+                            <th data-translate="table-quantity">Quantity</th>
+                            <th data-translate="table-loss">Loss (%)</th>
+                            <th data-translate="table-actions">Actions</th>
                         </tr>
                     </thead>
                     <tbody id="structuresTableBody">
                         <tr>
-                            <td colspan="6" class="no-data" data-translate="no-structures">Nenhuma estrutura cadastrada</td>
+                            <td colspan="6" class="no-data" data-translate="no-structures">No structures registered</td>
                         </tr>
                     </tbody>
                 </table>
@@ -235,27 +241,28 @@
         <!-- Stock Page -->
         <div id="stock-page" class="page">
             <div class="page-header">
-                <h2 data-translate="stock-management">Controle de Estoque</h2>
+                <h2 data-translate="stock-management">Stock Control</h2>
             </div>
 
             <div class="table-container">
                 <div class="search-bar">
-                    <input type="text" id="searchStock" data-translate-placeholder="search-stock" placeholder="Buscar no estoque...">
+                    <input type="text" id="searchStock" data-translate-placeholder="search-stock" placeholder="Search stock...">
                     <i class="fas fa-search"></i>
                 </div>
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th data-translate="table-code">Código</th>
-                            <th data-translate="table-description">Descrição</th>
-                            <th data-translate="table-barcode">Código de Barras</th>
-                            <th data-translate="table-stock-quantity">Quantidade em Estoque</th>
-                            <th data-translate="table-actions">Ações</th>
+                            <th data-translate="table-code">Code</th>
+                            <th data-translate="table-description">Description</th>
+                            <th data-translate="table-type">Type</th>
+                            <th data-translate="table-barcode">Barcode</th>
+                            <th data-translate="table-stock-quantity">Stock Quantity</th>
+                            <th data-translate="table-actions">Actions</th>
                         </tr>
                     </thead>
                     <tbody id="stockTableBody">
                         <tr>
-                            <td colspan="5" class="no-data" data-translate="no-stock">Nenhum item em estoque</td>
+                            <td colspan="5" class="no-data" data-translate="no-stock">No items in stock</td>
                         </tr>
                     </tbody>
                 </table>
@@ -265,9 +272,9 @@
         <!-- Available Production Page -->
         <div id="available-production-page" class="page">
             <div class="page-header">
-                <h2 data-translate="available-production-title">Disponibilidade para Produção</h2>
+                <h2 data-translate="available-production-title">Availability for Production</h2>
                 <button class="button-primary" id="btnRefreshProduction">
-                    <i class="fas fa-sync-alt"></i> <span data-translate="refresh">Atualizar</span>
+                    <i class="fas fa-sync-alt"></i> <span data-translate="refresh">Refresh</span>
                 </button>
             </div>
 
@@ -275,16 +282,18 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th data-translate="table-product-code">Código Produto</th>
-                            <th data-translate="table-description">Descrição</th>
-                            <th data-translate="table-available-quantity">Disponível Produção</th>
-                            <th data-translate="table-structure">Estrutura</th>
+                            <th data-translate="table-product-code">Product Code</th>
+                            <th data-translate="table-description">Description</th>
+                            <th data-translate="table-available-quantity">Available for Production</th>
+                            <th data-translate="table-total-value">Total Value</th>
+                            <th data-translate="table-priority">Priority</th>
+                            <th data-translate="table-structure">Structure</th>
                             <th data-translate="table-status">Status</th>
                         </tr>
                     </thead>
                     <tbody id="availableProductionTableBody">
                         <tr>
-                            <td colspan="4" class="no-data" data-translate="loading">Carregando...</td>
+                            <td colspan="4" class="no-data" data-translate="loading">Loading...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -294,38 +303,38 @@
         <!-- Production Page -->
         <div id="production-page" class="page">
             <div class="page-header">
-                <h2 data-translate="production-title">Produção</h2>
+                <h2 data-translate="stock-movement-title">Production</h2>
             </div>
 
             <div class="production-form-container">
                 <form id="productionForm">
                     <div class="form-group">
-                        <label for="productionCode" data-translate="form-product-code">Código do Produto/Matéria-Prima</label>
+                        <label for="productionCode" data-translate="form-product-code">Product/Raw Material Code</label>
                         <input type="text" id="productionCode" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="productionBarcode" data-translate="form-barcode">Código de Barras (EAN 13)</label>
+                        <label for="productionBarcode" data-translate="form-barcode">Barcode (EAN-13)</label>
                         <input type="text" id="productionBarcode" maxlength="13" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="productionQuantity" data-translate="form-quantity">Quantidade</label>
+                        <label for="productionQuantity" data-translate="form-quantity">Quantity</label>
                         <input type="number" id="productionQuantity" step="0.01" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="productionType" data-translate="form-movement-type">Tipo de Movimentação</label>
+                        <label for="productionType" data-translate="form-movement-type">Movement Type</label>
                         <select id="productionType" required>
-                            <option value="" data-translate="select">Selecione...</option>
-                            <option value="ENTRY" data-translate="entry">Entrada (ENTRY)</option>
-                            <option value="OUTPUT" data-translate="output">Saída (OUTPUT)</option>
+                            <option value="" data-translate="select">Select...</option>
+                            <option value="ENTRY" data-translate="entry">Entry (ENTRY)</option>
+                            <option value="OUTPUT" data-translate="output">Output (OUTPUT)</option>
                         </select>
                     </div>
 
                     <div class="form-actions">
                         <button type="submit" class="button-primary">
-                            <i class="fas fa-check"></i> <span data-translate="execute-movement">Executar Movimentação</span>
+                            <i class="fas fa-check"></i> <span data-translate="execute-movement">Execute Movement</span>
                         </button>
                     </div>
                 </form>
@@ -337,34 +346,34 @@
     <div id="productModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="productModalTitle" data-translate="new-product">Novo Produto</h3>
+                <h3 id="productModalTitle" data-translate="new-product">New Product</h3>
                 <button class="close-modal">&times;</button>
             </div>
             <form id="productForm">
                 <input type="hidden" id="productId">
                 <div class="form-group">
-                    <label for="productCode" data-translate="form-code">Código*</label>
+                    <label for="productCode" data-translate="form-code">Code*</label>
                     <input type="text" id="productCode" required>
                 </div>
                 <div class="form-group">
-                    <label for="productDescription" data-translate="form-description">Descrição* (máx. 90 caracteres)</label>
+                    <label for="productDescription" data-translate="form-description">Description* (max. 90 characters)</label>
                     <input type="text" id="productDescription" maxlength="90" required>
                 </div>
                 <div class="form-group">
-                    <label for="productType" data-translate="form-product-type">Tipo de Produto*</label>
+                    <label for="productType" data-translate="form-product-type">Product Type*</label>
                     <input type="text" id="productType" value="FP" required>
                 </div>
                 <div class="form-group">
-                    <label for="productBarcode" data-translate="form-barcode-ean">Código de Barras (EAN 13)*</label>
+                    <label for="productBarcode" data-translate="form-barcode-ean">Barcode (EAN-13)*</label>
                     <input type="text" id="productBarcode" name="barcode" maxlength="13" required>
                 </div>
                 <div class="form-group">
-                    <label for="productPrice" data-translate="form-price">Preço*</label>
+                    <label for="productPrice" data-translate="form-price">Price*</label>
                     <input type="number" id="productPrice" name="price" step="0.01" required>
                 </div>
                 <div class="form-actions">
-                    <button type="button" class="button-secondary close-modal" data-translate="cancel">Cancelar</button>
-                    <button type="submit" class="button-primary" data-translate="save">Salvar</button>
+                    <button type="button" class="button-secondary close-modal" data-translate="cancel">Cancel</button>
+                    <button type="submit" class="button-primary" data-translate="save">Save</button>
                 </div>
             </form>
         </div>
@@ -374,34 +383,34 @@
     <div id="rawMaterialModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="rawMaterialModalTitle" data-translate="new-raw-material">Nova Matéria-Prima</h3>
+                <h3 id="rawMaterialModalTitle" data-translate="new-raw-material">New Raw Material</h3>
                 <button class="close-modal">&times;</button>
             </div>
             <form id="rawMaterialForm">
                 <input type="hidden" id="rawMaterialId">
                 <div class="form-group">
-                    <label for="rawMaterialCode" data-translate="form-code">Código*</label>
+                    <label for="rawMaterialCode" data-translate="form-code">Code*</label>
                     <input type="text" id="rawMaterialCode" required>
                 </div>
                 <div class="form-group">
-                    <label for="rawMaterialDescription" data-translate="form-description">Descrição* (máx. 90 caracteres)</label>
+                    <label for="rawMaterialDescription" data-translate="form-description">Description* (max. 90 characters)</label>
                     <input type="text" id="rawMaterialDescription" maxlength="90" required>
                 </div>
                 <div class="form-group">
-                    <label for="rawMaterialType" data-translate="form-product-type">Tipo de Produto*</label>
+                    <label for="rawMaterialType" data-translate="form-product-type">Product Type*</label>
                     <input type="text" id="rawMaterialType" value="RAW" required>
                 </div>
                 <div class="form-group">
-                    <label for="rawMaterialCodeBar" data-translate="form-barcode-ean">Código de Barras (EAN 13)*</label>
+                    <label for="rawMaterialCodeBar" data-translate="form-barcode-ean">Barcode (EAN-13)*</label>
                     <input type="text" id="rawMaterialCodeBar" name="barcode" maxlength="13" required>
                 </div>
                 <div class="form-group">
-                    <label for="rawMaterialCost" data-translate="form-cost">Custo*</label>
+                    <label for="rawMaterialCost" data-translate="form-cost">Cost*</label>
                     <input type="number" id="rawMaterialCost" name="cost" step="0.01" required>
                 </div>
                 <div class="form-actions">
-                    <button type="button" class="button-secondary close-modal" data-translate="cancel">Cancelar</button>
-                    <button type="submit" class="button-primary" data-translate="save">Salvar</button>
+                    <button type="button" class="button-secondary close-modal" data-translate="cancel">Cancel</button>
+                    <button type="submit" class="button-primary" data-translate="save">Save</button>
                 </div>
             </form>
         </div>
@@ -411,30 +420,57 @@
     <div id="structureModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="structureModalTitle" data-translate="new-structure">Nova Estrutura</h3>
+                <h3 id="structureModalTitle" data-translate="new-structure">New Structure</h3>
                 <button class="close-modal">&times;</button>
             </div>
             <form id="structureForm">
                 <input type="hidden" id="structureId">
                 <div class="form-group">
-                    <label for="structureProductCode" data-translate="form-product-code-label">Código do Produto*</label>
+                    <label for="structureProductCode" data-translate="form-product-code-label">Product Code*</label>
                     <input type="text" id="structureProductCode" required>
                 </div>
                 <div class="form-group">
-                    <label for="structureRawCode" data-translate="form-raw-code">Código da Matéria-Prima*</label>
+                    <label for="structureRawCode" data-translate="form-raw-code">Raw Material Code*</label>
                     <input type="text" id="structureRawCode" required>
                 </div>
                 <div class="form-group">
-                    <label for="structureQuantity" data-translate="form-quantity-label">Quantidade*</label>
+                    <label for="structureQuantity" data-translate="form-quantity-label">Quantity*</label>
                     <input type="number" id="structureQuantity" step="0.01" required>
                 </div>
                 <div class="form-group">
-                    <label for="structureLoss" data-translate="form-loss">Perda (%)*</label>
+                    <label for="structureLoss" data-translate="form-loss">Loss (%)*</label>
                     <input type="number" id="structureLoss" step="0.01" required>
                 </div>
                 <div class="form-actions">
-                    <button type="button" class="button-secondary close-modal" data-translate="cancel">Cancelar</button>
-                    <button type="submit" class="button-primary" data-translate="save">Salvar</button>
+                    <button type="button" class="button-secondary close-modal" data-translate="cancel">Cancel</button>
+                    <button type="submit" class="button-primary" data-translate="save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Clear All Structure -->
+    <div id="clearStructureModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-translate="clear-all-structure">Clear Structure</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="clearStructureForm">
+                <div class="form-group">
+                    <label for="clearStructureProductCode" data-translate="form-product-code-clear">Product Code*</label>
+                    <input type="text" id="clearStructureProductCode" required placeholder="Enter product code...   ">
+                </div>
+                <div class="alert-warning" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 5px;">
+                    <i class="fas fa-exclamation-triangle" style="color: #ffc107;"></i>
+                    <strong data-translate="warning">WARNING:</strong>
+                    <p data-translate="clear-structure-warning">This action will delete ALL structures related to this product. This action cannot be undone!</p>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="button-secondary close-modal" data-translate="cancel">Cancel</button>
+                    <button type="submit" class="button-danger">
+                        <i class="fas fa-trash-alt"></i> <span data-translate="confirm-clear">Confirm</span>
+                    </button>
                 </div>
             </form>
         </div>

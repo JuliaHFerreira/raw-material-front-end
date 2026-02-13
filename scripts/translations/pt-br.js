@@ -13,7 +13,7 @@ window.TRANSLATIONS.pt = {
   'menu-manufacturing': 'Manufatura',
   'menu-stock': 'Estoque',
   'menu-available-production': 'Disponível Produção',
-  'menu-production': 'Produção',
+  'stock-movement': 'Movimentação de Estoque - Manual',
   'menu-support': 'Suporte',
   'menu-feedback': 'Feedback',
   'menu-settings': 'Configurações',
@@ -53,10 +53,10 @@ window.TRANSLATIONS.pt = {
   'stock-management': 'Controle de Estoque',
   'search-stock': 'Buscar no estoque...',
   'no-stock': 'Nenhum item em estoque',
+  'stock-movement-title': 'Movimentação de Estoque',
 
   // Production
   'available-production-title': 'Disponibilidade para Produção',
-  'production-title': 'Produção',
   'refresh': 'Atualizar',
   'loading': 'Carregando...',
 
@@ -74,6 +74,8 @@ window.TRANSLATIONS.pt = {
   'table-loss': 'Perda (%)',
   'table-stock-quantity': 'Quantidade em Estoque',
   'table-available-quantity': 'Quantidade Disponível',
+  'table-total-value': 'Valor Total',
+  'table-priority': 'Prioridade',
   'table-status': 'Status',
   'table-structure': 'Estrutura',
 
@@ -92,6 +94,7 @@ window.TRANSLATIONS.pt = {
   'form-loss': 'Perda (%)*',
   'form-barcode': 'Código de Barras (EAN 13)',
   'form-movement-type': 'Tipo de Movimentação',
+  'form-product-code-clear': 'Código do Produto*',
 
   // Form Options
   'select': 'Selecione...',
@@ -105,6 +108,10 @@ window.TRANSLATIONS.pt = {
   'delete': 'Excluir',
   'clear': 'Limpar',
   'execute-movement': 'Executar Movimentação',
+  'clear-all-structure': 'Limpar Estrutura',
+  'enter-product-code': 'Digite o código do produto:',
+  'clear-all-structure': 'Limpar Estrutura',
+  'confirm-clear': 'Confirmar',
 
   // Status
   'available': 'Disponível',
@@ -141,5 +148,10 @@ window.TRANSLATIONS.pt = {
   'error-updating-stock': 'Erro ao realizar movimentação',
   'error-product-not-found': 'Produto não encontrado',
   'error-raw-material-not-found': 'Matéria-prima não encontrada',
-  'error-structure-not-found': 'Estrutura não encontrada'
+  'error-structure-not-found': 'Estrutura não encontrada',
+  'confirm-clear-all-structure': 'ATENÇÃO: Tem certeza que deseja excluir TODA A ESTRUTURA do produto {code}? Esta ação não pode ser desfeita!',
+  'success-all-structure-deleted': 'Toda estrutura do produto foi excluída com sucesso!',
+  'warning': 'ATENÇÃO',
+  'clear-structure-warning': 'Esta ação irá excluir TODAS as estruturas relacionadas a este produto. Esta ação não pode ser desfeita!',
+  'success-all-structure-deleted': 'Toda estrutura do produto foi excluída com sucesso!'
 };

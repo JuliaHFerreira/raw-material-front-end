@@ -302,6 +302,29 @@ document.getElementById('btnNewStructure').addEventListener('click', () => {
     UI.showModal('structureModal');
 });
 
+document.getElementById('btnClearAllStructure').addEventListener('click', () => {
+    clearAllStructureByCode();
+});
+
+// Clear Structure Form Submit
+document.getElementById('clearStructureForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const productCode = document.getElementById('clearStructureProductCode').value;
+    
+    try {
+        console.log('Limpando toda estrutura do produto:', productCode);
+        await API.structure.deleteByProductCode(productCode);
+        
+        UI.showToast(translate('success-all-structure-deleted'));
+        UI.hideModal('clearStructureModal');
+        loadStructures();
+    } catch (error) {
+        UI.showToast(translate('error-deleting-structure'), 'error');
+        console.error('Error clearing all structure:', error);
+    }
+});
+
 document.getElementById('structureForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -365,6 +388,12 @@ async function deleteStructure(id) {
         UI.showToast(translate('error-deleting-structure'), 'error');
         console.error('Error deleting structure:', error);
     }
+}
+
+async function clearAllStructureByCode() {
+    // Apenas abre o modal
+    document.getElementById('clearStructureForm').reset();
+    UI.showModal('clearStructureModal');
 }
 
 // Stock
@@ -490,6 +519,8 @@ function initializeForms() {
     });
 }
 
+
+
 // Expose functions globally for event handlers
 window.editProduct = editProduct;
 window.deleteProduct = deleteProduct;
@@ -497,4 +528,5 @@ window.editRawMaterial = editRawMaterial;
 window.deleteRawMaterial = deleteRawMaterial;
 window.editStructure = editStructure;
 window.deleteStructure = deleteStructure;
-window.clearStock = clearStock;
+window.clearAllStructureByCode = clearAllStructureByCode;
+window.clearStock = clearStock;;
