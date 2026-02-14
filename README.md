@@ -95,27 +95,6 @@ Todas as classes CSS seguem nomenclatura em inglês para melhor padronização:
 - Função `translate()` global para uso dinâmico
 - Preferência de idioma salva em `localStorage`
 
-## 📦 Estrutura de Arquivos
-
-```
-estoque-nuvem-frontend/
-│
-├── index.html              # Página principal
-├── css/
-│   └── styles.css         # Estilos globais (classes em inglês)
-├── js/
-│   ├── translations.js    # Sistema de tradução PT/EN
-│   ├── api.js             # Funções de comunicação com a API
-│   ├── ui.js              # Funções de interface do usuário
-│   └── app.js             # Lógica principal da aplicação
-├── tests/
-│   ├── setup.js           # Configuração dos testes
-│   ├── api.test.js        # Testes da API
-│   └── ui.test.js         # Testes da UI
-├── package.json           # Configuração do projeto e dependências
-└── README.md             # Documentação
-```
-
 ## 🧪 Testes Unitários
 
 O projeto inclui testes unitários abrangentes:
@@ -206,47 +185,6 @@ O sistema inclui tratamento de erros robusto:
 - Logs detalhados no console
 - Fallback para estados vazios
 - Recuperação automática quando possível
-
-## 📊 Indicadores Visuais
-
-- 🟢 Verde: Disponível para produção
-- 🔴 Vermelho: Indisponível
-- 🟡 Amarelo: Ações de edição
-- 🔴 Vermelho: Ações de exclusão
-
-## 🔄 API Endpoints
-
-Todos os endpoints estão implementados conforme especificação:
-
-**Produtos:**
-- POST /product/new
-- GET /Product
-- GET /Product/{CODE}
-- PUT /product/edit/{id}
-- DELETE /product/{id}
-
-**Matérias-Primas:**
-- POST /rawmaterial/new
-- GET /rawmaterial
-- GET /rawmaterial/{CODE}
-- PUT /rawmaterial/edit/{id}
-- DELETE /rawmaterial/{id}
-
-**Estrutura:**
-- POST /structure/new
-- GET /structure
-- GET /structure/{CODE}
-- PUT /structure/edit/{id}
-- DELETE /structure/{productCode}
-- DELETE /structure/{id}
-
-**Estoque:**
-- GET /stock
-- PUT /stock/clear/{code}
-- PUT /stock/update/{code}
-
-**Produção:**
-- GET /product/production
 
 ## 📝 Licença
 
