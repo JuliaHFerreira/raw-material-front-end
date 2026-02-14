@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = window.APP_CONFIG?.API_BASE_URL || "http://localhost:8080";
+const API_BASE_URL = 'http://localhost:8080';
 
 // API Service
 const API = {
