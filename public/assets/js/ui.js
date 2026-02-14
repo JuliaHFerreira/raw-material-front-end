@@ -304,37 +304,31 @@ const UI = {
 
     // Render available production table
     renderAvailableProductionTable(production) {
-    const tbody = document.getElementById('availableProductionTableBody');
-    
-    if (!production || production.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="no-data" data-translate="loading">${translate('loading')}</td></tr>`;
-        return;
+        const tbody = document.getElementById('availableProductionTableBody');
+
+        if (!production || production.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="4" class="no-data" data-translate="loading">${translate('loading')}</td></tr>`;
+            return;
+        }
+
+        tbody.innerHTML = production.map(item => {
+            const canProduce = item.maxProducible > 0 && item.structureStatus === 'OK';
+            const statusClass = canProduce ? 'available' : 'unavailable';
+            const statusText = item.structureStatus === 'OK' ? translate('available') : translate('unavailable');
+
+            return `
+                <tr>
+                    <td>${item.productCode}</td>
+                    <td>${item.productDescription || '-'}</td>
+                    <td>${UI.formatNumber(item.maxProducible || 0)}</td>
+                    <td>${UI.formatCurrency(item.totalPrice || 0)}</td>
+                    <td>${item.priority}</td>
+                    <td>${item.structureStatus}</td>
+                    <td>
+                        <span class="status-badge ${statusClass}" data-translate="${item.structureStatus === 'OK' ? 'available' : 'unavailable'}">${statusText}</span>
+                    </td>
+                </tr>
+            `;
+        }).join('');
     }
-
-    tbody.innerHTML = production.map((item, index) => {
-        const canProduce = (item.maxProducible > 0 || item.availableQuantity > 0) && item.structureStatus === 'OK';
-        const statusClass = canProduce ? 'available' : 'unavailable';
-        const statusText = canProduce ? translate('available') : translate('unavailable');
-        
-        const priority = item.priority || (index + 1);
-
-        const totalValue = item.totalValue || 0;
-        
-        const availableQty = item.maxProducible || item.availableQuantity || 0;
-        
-        return `
-            <tr>
-                <td>${item.productCode || '-'}</td>
-                <td>${item.productDescription || item.description || '-'}</td>
-                <td>${UI.formatNumber(availableQty)}</td>
-                <td>${UI.formatCurrency(totalValue)}</td>
-                <td>${priority}</td>
-                <td>${item.structureStatus || 'N/A'}</td>
-                <td>
-                    <span class="status-badge ${statusClass}">${statusText}</span>
-                </td>
-            </tr>
-        `;
-    }).join('');
-}
 };
